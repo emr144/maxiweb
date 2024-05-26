@@ -4,11 +4,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def agrega_curso(req,nombre,camada,email):
-    nuevo_curso= Curso (email=email, nombre= nombre, camada=camada)
+def agrega_curso(req,nombre,camada):
     nuevo_curso.save()
     return HttpResponse(f"""
-        <p> curso: {nuevo_curso.nombre} - camada : {nuevo_curso.camada} - email : {nuevo_curso.email} creado!</p>
+        <p> curso: {nuevo_curso.nombre} - camada : {nuevo_curso.camada}     creado!</p>
     """)
 
 def lista_cursos(req):

@@ -29,6 +29,6 @@ urlpatterns = [
     path('saludarcopado/', saludo2),
     path('saludar-nombre/<nombre>/<apellido>', saludo_con_nombre),
     path('saludaTemplate/', probando_template),
-    path('agrega-curso/<str:nombre>/<int:camada>/<str:email>', agrega_curso,name='agrega_curso'),
-     path('lista_cursos/', lista_cursos),
+    path('agrega-curso/<str:nombre>/<int:camada>', agrega_curso,name='agrega_curso'),
+    path('lista_cursos/', lista_cursos),
 ]

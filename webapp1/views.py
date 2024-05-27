@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Curso
+from .models import Curso, Estudiante,Profesor ,Entregable
 from django.http import HttpResponse
 
 # Create your views here.
@@ -14,3 +14,18 @@ def agrega_curso(req,nombre,camada):
 def lista_cursos(req):
     lista=Curso.objects.all()
     return render  (req,"lista_cursos.html",{"lista_cursos":lista})
+
+def inicio(req):
+    return HttpResponse("Pantalla de Inicio")
+
+def cursos(req):
+    return HttpResponse("Pantalla de Cursos")
+
+def estudiante(req):
+    return HttpResponse("Pantalla de Estudiante")
+
+def profesor(req):
+    return HttpResponse("Pantalla de Profesor")
+
+def entregables(req):
+    return HttpResponse("Pantalla de Entregables")
